@@ -10,7 +10,7 @@ The masked LSTM layer that's used during training to learn structured sparsity
 can be found in [src/layers/masked_lstm.py](./src/layers/masked_lstm.py)
 
 ## Installation & dependencies
-This code has been tested on Python 3.6, 3.8 and 3.9. Using python 3.6, you
+This code has been tested on Python 3.6 and 3.8-3.10. Using python 3.6, you
 may run into issues with dependencies; installing an older version usually
 does the trick.
 
