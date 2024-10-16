@@ -1,5 +1,12 @@
 # Learning structured sparsity for efficient basecalling
 
+The code in this repository supports the paper (to be) presented at BCB '24:
+
+> Mees Frensel, Zaid Al-Ars, and H Peter Hofstee. 2024. Learning Structured
+> Sparsity for Efficient Nanopore DNA Basecalling Using Delayed Masking.
+> In _Proceedings of The 15th ACM Conference on Bioinformatics, Computational
+> Biology, and Health Informatics (BCB ’24)_.
+
 This repository contains the code to train basecaller neural networks while
 learning structured sparsity in the LSTM layers. By penalizing nonzero mask
 entries on the input-to-hidden and hidden-to-hidden weight matrices, the model
