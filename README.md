@@ -5,7 +5,7 @@ The code in this repository supports the paper presented at BCB '24:
 > Mees Frensel, Zaid Al-Ars, and H Peter Hofstee. 2024. Learning Structured
 > Sparsity for Efficient Nanopore DNA Basecalling Using Delayed Masking.
 > In _Proceedings of The 15th ACM Conference on Bioinformatics, Computational
-> Biology, and Health Informatics (BCB ’24)_.
+> Biology, and Health Informatics (BCB ’24)_. https://doi.org/10.1145/3698587.3701357
 
 This repository contains the code to train basecaller neural networks while
 learning structured sparsity in the LSTM layers. By penalizing nonzero mask
@@ -25,7 +25,7 @@ A working CUDA installation and a GPU with about 16 GB of memory is required,
 more is recommended: it allows increasing the batch size to speed up training.
 For the default batch size 64, --starting-lr 0.001 is the default. For batch
 size 128, we used --starting-lr 0.0015. On an A100, 5 epochs of training takes
-around 23 to 25 hours.
+around 23 to 25 hours, but this also depends on CPU and filesystem speed.
 
 ```sh
 git clone https://github.com/meesfrensel/efficient-basecallers.git
@@ -58,7 +58,7 @@ python ./scripts/train.py
 Study the other available parameters with `python ./scripts/train.py --help`.
 
 ## Basecalling & evaluation
-Basecall you test data with [scripts/basecall.py](./scripts/basecall.py):
+Basecall your test data with [scripts/basecall.py](./scripts/basecall.py):
 
 ```sh
 python ./scripts/basecall.py
