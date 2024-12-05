@@ -1,6 +1,6 @@
 # Learning structured sparsity for efficient basecalling
 
-The code in this repository supports the paper (to be) presented at BCB '24:
+The code in this repository supports the paper presented at BCB '24:
 
 > Mees Frensel, Zaid Al-Ars, and H Peter Hofstee. 2024. Learning Structured
 > Sparsity for Efficient Nanopore DNA Basecalling Using Delayed Masking.
@@ -18,14 +18,14 @@ can be found in [src/layers/masked_lstm.py](./src/layers/masked_lstm.py)
 
 ## Installation & dependencies
 This code has been tested on Python 3.6 and 3.8-3.10. Using python 3.6, you
-may run into issues with dependencies; installing an older version usually
-does the trick.
+may run into issues with dependencies; installing an older version of a
+dependency usually does the trick.
 
 A working CUDA installation and a GPU with about 16 GB of memory is required,
 more is recommended: it allows increasing the batch size to speed up training.
 For the default batch size 64, --starting-lr 0.001 is the default. For batch
 size 128, we used --starting-lr 0.0015. On an A100, 5 epochs of training takes
-around 23 to 24 hours.
+around 23 to 25 hours.
 
 ```sh
 git clone https://github.com/meesfrensel/efficient-basecallers.git
